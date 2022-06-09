@@ -12,11 +12,13 @@ def ft_power(base, exp):
     i = 0
     res = 1
     if int(exp) == exp:
-        if exp < 0:
+        if exp < 0 and base !=0:
             exp *= -1
             res = 1 / loop(base, exp)
-        else:
+        elif exp >= 0:
             res = loop(base, exp)
+        else:
+            return "ERROR"
         return res
     else:
         return "some algorithm ..."
